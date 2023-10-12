@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Notes</string>
+    <string name="settings_txt_language">Language</string>
+    <string name="settings_txt_darkmode">Dark Mode</string>
+    <string name="settings_txt_general">General</string>
+    <string name="settings_name">Settings</string>
+    <string name="notes_name">Notes</string>
+    <string name="fab_text">Add</string>
+    <string name="toolbar_btn_menu_action">Menu</string>
+    <string name="notes_btn_sort">Sort</string>
+    <string name="notes_btn_filters">Filters</string>
+    <string name="notes_btn_delete">Delete</string>
+    <string name="dialog_add_title">Create</string>
+    <string name="dialog_add_btn_cancel">Cancel</string>
+    <string name="dialog_add_btn_create">Save</string>
+    <string name="dialog_add_input_title">Title</string>
+    <string name="dialog_add_input_note">Note</string>
+    <string name="dialog_add_placehold_note">Write your note</string>
+    <string name="dialog_sort_title">Sort</string>
+    <string name="dialog_sort_btn_cancel">Cancel</string>
+    <string name="dialog_sort_btn_confirm">Confirm</string>
+    <string name="dialog_sort_btn_titleasc">Title Asc</string>
+    <string name="dialog_sort_btn_titledesc">Title Desc</string>
+    <string name="dialog_sort_btn_dateasc">Date Asc</string>
+    <string name="dialog_sort_btn_datedesc">Date Desc</string>
+    <string name="details_name">Details\n</string>
 </resources>

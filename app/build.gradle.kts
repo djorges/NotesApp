@@ -60,7 +60,7 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material3:material3:1.1.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -74,6 +74,7 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-compiler:$hilt_version")
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     //Room
     val room_version = "2.5.0"
@@ -81,6 +82,20 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")//Couroutines support
+
+    //Navigation
+    val nav_version = "2.6.0"
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    //DataStore
+    val prefs_version = "1.0.0"
+    implementation("androidx.datastore:datastore-preferences:$prefs_version")
+
+    //Gson
+    implementation("com.google.code.gson:gson:2.10.1")
+
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.4.0")
 }
 
 kapt{
