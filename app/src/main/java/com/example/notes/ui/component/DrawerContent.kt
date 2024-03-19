@@ -3,10 +3,13 @@ package com.example.notes.ui.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -39,6 +42,12 @@ fun DrawerContent(
             contentDescription = stringResource(id = R.string.notes_name)
         ),
         NavDrawerItem(
+            title = stringResource(id = R.string.about_name),
+            route = Routes.About.route,
+            icon = R.drawable.baseline_help_24,
+            contentDescription = stringResource(id = R.string.about_name)
+        ),
+        NavDrawerItem(
             title = stringResource(id = R.string.settings_name),
             route = Routes.Settings.route,
             icon = R.drawable.baseline_settings_24,
@@ -49,7 +58,11 @@ fun DrawerContent(
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
 
-    ModalDrawerSheet{
+    ModalDrawerSheet(
+        modifier = Modifier
+            .requiredWidth(265.dp)
+            .fillMaxHeight()
+    ){
         //Drawer Header
         Column(
             modifier = Modifier
@@ -61,7 +74,7 @@ fun DrawerContent(
                 modifier = Modifier.padding(top = 50.dp),
                 text = stringResource(id = R.string.app_name),
                 fontSize = 40.sp,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.Medium,
                 color = MaterialTheme.colorScheme.onPrimary
             )
         }
@@ -70,7 +83,8 @@ fun DrawerContent(
         LazyColumn(modifier){
             items(items){item ->
                 NavigationDrawerItem(
-                    modifier = Modifier.padding(8.dp),
+                    modifier = Modifier.padding(4.dp),
+                    shape = RoundedCornerShape(6.dp),
                     icon = {
                         Icon(
                             painter = painterResource(id = item.icon),

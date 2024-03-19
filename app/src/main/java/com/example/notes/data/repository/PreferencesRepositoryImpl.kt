@@ -3,7 +3,7 @@ package com.example.notes.data.repository
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
-import com.example.notes.data.utils.AppLanguage
+import com.example.notes.data.dto.AppLanguage
 import com.example.notes.data.utils.PrefsKeys
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

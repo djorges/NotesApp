@@ -11,6 +11,8 @@ object DateUtils {
     }
 
     fun getStringFromDate(date:Date):String{
-        return SimpleDateFormat("yyyy-MM-dd hh:mm", Locale.US).format(date)
+        return SimpleDateFormat(DATE_PATTERN, Locale.US).format(date)
     }
+
+    private const val DATE_PATTERN:String = "yyyy-MM-dd hh:mm"
 }

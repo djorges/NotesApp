@@ -1,5 +1,6 @@
-package com.example.notes.di
+package com.example.notes.data.di
 
+import android.content.ClipboardManager
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.core.handlers.ReplaceFileCorruptionHandler
@@ -48,6 +49,15 @@ object MainModule {
             )
         )
     }
+
+    @Provides
+    @Singleton
+    fun provideClipboardService(
+        @ApplicationContext context: Context
+    ): ClipboardManager {
+        return context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+    }
+
 
     private const val PREFERENCES_NAME = "settings_preferences"
     private const val DB_NAME =  "notes.db"

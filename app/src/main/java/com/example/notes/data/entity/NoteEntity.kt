@@ -19,10 +19,16 @@ data class NoteEntity (
     @ColumnInfo(name = "note")
     val note:String,
 
+    @ColumnInfo(name = "color")
+    val color:Long,
+
+    @ColumnInfo(name = "is_pinned")
+    val isPinned:Boolean = false,
+
     @ColumnInfo(name = "dateUpdated")
     @TypeConverters(TimestampConverter::class)
     val dateUpdated: Date = DateUtils.getCurrentTime(),
 
-    @ColumnInfo(name = "imageUri")
-    val imageUri:String? = null
+    @ColumnInfo(name = "imageUris")
+    val imageUris:List<String> = emptyList()
 )

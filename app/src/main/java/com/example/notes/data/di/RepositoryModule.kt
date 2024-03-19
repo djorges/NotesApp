@@ -1,4 +1,4 @@
-package com.example.notes.di
+package com.example.notes.data.di
 
 import com.example.notes.data.repository.NotesRepositoryImpl
 import com.example.notes.data.repository.INotesRepository

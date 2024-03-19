@@ -1,6 +1,6 @@
 package com.example.notes.data.repository
 
-import com.example.notes.data.utils.AppLanguage
+import com.example.notes.data.dto.AppLanguage
 import kotlinx.coroutines.flow.Flow
 
 interface PreferencesRepository{
